@@ -222,11 +222,14 @@ async function getCheckinInfoSJ(host) {
             if (days && days.indexOf('\n') !== -1) {
                 days = days.replace(/\n/g, '');
             }
-            // 签到奖励
+            
+            /* 签到奖励
             let reward =$('#plugin > div.comiis_body > div.comiis_bodybox > div.k_misign_header > div.info > div:nth-child(4) > div:nth-child(2)').text();
             if(reward && reward.indexof('\n') !== -1){
                 reward = reward.replace(/\n/g, '');
             }
+            */
+        
             // 签到总天数
             let allDays = $('#plugin > div.comiis_body > div.comiis_bodybox > div.k_misign_header > div.info > div:nth-child(3) > div:nth-child(2)').text();
             if (allDays && allDays.indexOf('\n') !== -1) {
@@ -237,7 +240,8 @@ async function getCheckinInfoSJ(host) {
             if (rank && rank.indexOf('\n') !== -1) {
                 rank = rank.replace(/\n/g, '');
             }
-            let info = " 已连续签到： " + days + " 天; 今日排名： " + rank + " 位； 签到总天数： " + allDays + " 天；" + " 签到奖励： "+ reward +" K币; ";
+            // + " 签到奖励： "+ reward +" K币; "
+            let info = " 已连续签到： " + days + " 天; 今日排名： " + rank + " 位； 签到总天数： " + allDays + " 天；";
             host.message = host.message + info;
             console.log(host.name, info)
         })
