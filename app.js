@@ -241,7 +241,7 @@ async function getCheckinInfoSJ(host) {
                 rank = rank.replace(/\n/g, '');
             }
             // + " 签到奖励： "+ reward +" K币; "
-            let info = " 已连续签到： " + days + " 天; 今日排名： " + rank + " 位； 签到总天数： " + allDays + " 天；";
+            let info = " 已连续签到： " + days + " ; 今日排名： " + rank + " 位； 签到总天数： " + allDays + " ；";
             host.message = host.message + info;
             console.log(host.name, info)
         })
