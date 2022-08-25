@@ -5,7 +5,7 @@ import iconv from "iconv-lite";
 import * as cheerio from 'cheerio';
 
 axios.defaults.retry = 3; //设置全局请求次数
-axios.defaults.retryDelay = 1000;//设置全局请求间隙
+axios.defaults.retryDelay = 1500;//设置全局请求间隙
 
 // 填写server酱sckey,不开启server酱则不用填
 const sckey = process.env["SCKEY"];
@@ -34,7 +34,7 @@ let cookieSJ = process.env["SJCOOKIE"];
 
 
 const SJUrl =
-    "https://www.4ksj.com/";
+    "https://www.4ksj.com/qiandao/";
 const hao4kUrl =
     "https://www.hao4k.cn/qiandao/";
 
